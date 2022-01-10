@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220107193217_CorreccionCampoEnteroOrdenCategoria.cs" />
+    <Compile Remove="Migrations\20220107193217_CorreccionCampoEnteroOrdenCategoria.Designer.cs" />
+    <Compile Remove="Migrations\20220107193904_CorrecionTipoDatoOrder.cs" />
+    <Compile Remove="Migrations\20220107193904_CorrecionTipoDatoOrder.Designer.cs" />
+    <Compile Remove="Migrations\20220107203322_CoreccionTipoDeDato.cs" />
+    <Compile Remove="Migrations\20220107203322_CoreccionTipoDeDato.Designer.cs" />
+    <Compile Remove="Migrations\20220107203629_CorrecionTipoDato.cs" />
+    <Compile Remove="Migrations\20220107203629_CorrecionTipoDato.Designer.cs" />
+    <Compile Remove="Migrations\20220107212056_cambioDato.cs" />
+    <Compile Remove="Migrations\20220107212056_cambioDato.Designer.cs" />
+    <Compile Remove="Migrations\20220107215130_CambioDos.cs" />
+    <Compile Remove="Migrations\20220107215130_CambioDos.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="3.1.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Initializer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UwuBlog.Models\UwuBlog.Models.csproj" />
+    <ProjectReference Include="..\UwuBlog.Utility\UwuBlog.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

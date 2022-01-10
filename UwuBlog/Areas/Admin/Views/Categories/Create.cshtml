@@ -1,0 +1,49 @@
+﻿@model UwuBlog.Models.Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+
+<h3 class="text-center text-black">Crear una nueva categoria</h3>
+
+<form method="post" asp-action="Create">
+
+    <div class="row px-2 mx-2 border">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+        <div class="col-10 offset-1 mt-4">
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Name" class="text-black" ></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Name" class="form-control text-black bg-white" />
+                <br />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Order" class="text-black" ></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Order" class="form-control text-black bg-white" />
+                    <span asp-validation-for="Order" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    <partial name="_ViewCreateReturn"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
